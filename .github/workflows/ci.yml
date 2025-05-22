@@ -85,6 +85,9 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
       - name: Run tests
         env:
           RAILS_ENV: test
